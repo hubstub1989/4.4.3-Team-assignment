@@ -1,0 +1,195 @@
+.banner {
+    overflow-x: hidden;
+}
+
+.banner img{
+    width: 100%;
+    margin-top: 88px;
+}
+
+.promo {
+    border-radius: 10px;
+    margin: 0 32px 0 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+    overflow: hidden;
+}
+
+.promo-explanation {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    padding: 20px;
+    text-align: justify;
+}
+
+.promo-text h1{
+    text-align: center;
+    font-family: "Rowdies", serif;
+    top: 0px;
+    font-size: 80px;
+    color: darkred;
+    text-shadow: 2px 2px white;
+}
+
+.promo-text h3 {
+    text-align: center;
+    font-size: 60px;
+    font-family:"Cabin", sans-serif;
+    color: antiquewhite;
+}
+
+.promo img{
+    height: 50vh;
+    padding: 10px;
+}
+/* Introduce the tickets */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Radio Canada Big', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgb(130, 100, 255);
+    margin: 64px;
+}
+.intro b{
+    color: darkblue;
+}
+
+/* CSS for cards ticketing */
+.tickets {
+    display: flex;
+    justify-content: space-around;
+    min-height: 80vh;
+    place-items: center;
+    line-height: 1.6;
+}
+
+.card {
+    color: white;
+    font-family: sans-serif;
+    background-size: cover;
+    padding: 10rem 0 0;
+    margin-bottom: 5rem;
+    max-width: 35ch;
+    min-width: 5ch;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    z-index: 0;
+
+    transition: transform 500ms ease;
+}
+
+#daypass{
+    background-image: url(assets/daypass.jpg);
+}
+
+#seasonpass{
+    background-image: url(assets/seasonpass.jpg);
+}
+
+#annualpass{
+    background-image: url(assets/annualpass.jpg);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.card-content {
+    padding: 1.5em;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4) 20%,black);
+
+    transform: translateY(70%);
+    transition: transform 500ms ease;
+    transition-delay: 200ms;
+}
+
+.card:hover .card-content {
+    transform: translateY(0%);
+}
+
+#daypass .card-title {
+    border-bottom: 4px solid blue;
+}
+#seasonpass .card-title {
+    border-bottom: 4px solid coral;
+}
+
+#annualpass .card-title {
+    border-bottom: 4px solid goldenrod;
+}
+
+.card-body {
+    color: whitesmoke;
+}
+
+.card .button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: cornflowerblue;
+    padding: 0.5em 1.25em;
+    border-radius: .25rem;
+}
+
+.card .button:hover, .card .button:focus {
+    background-color: darkcyan;
+}
+
+/* adjust content in the event of resize */
+@media (max-width: 850px) {
+    .banner {
+        margin-top: 88px;
+    }
+
+    .banner img {
+        width: auto;
+        height: 100%;
+        transform: translate(-350px,0);
+    }
+
+    .promo {
+        border-radius: 10px;
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: cornflowerblue;
+        font-size: x-large;
+        overflow: hidden;
+    }
+
+    .card {
+        height: 100vh;
+    }
+
+
+    #daypass .card-content {
+        transform: translateY(0%);
+        padding: 1.8rem;
+    }
+
+    #seasonpass .card-content {
+        transform: translateY(0%);
+        padding: 1.75rem;
+    }
+
+    #annualpass .card-content {
+        transform: translateY(0%);
+        padding: 1.5rem;
+    }
+
+    .card-content:hover {
+        transform: translateY(0%);
+    }
+}
